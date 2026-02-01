@@ -1,8 +1,8 @@
 name: attendance
 
-on:
+于:
   schedule:
-    - cron: '0 16 * * *'
+    - cron: '5 4 * * *'
   workflow_dispatch:
   workflow_call:
     secrets:
@@ -15,11 +15,11 @@ on:
       MAX_RETRIES:
         required: false
     inputs:
-      repository:
+      仓库:
         description: The repository to run the workflow on
-        default: enpitsuLin/skland-daily-attendance
+        默认: enpitsuLin/skland-daily-attendance
         required: false
-        type: string
+        输入: string
 
 jobs:
   attendance:
@@ -28,7 +28,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          repository: ${{ inputs.repository || github.repository }}
+          仓库: ${{ inputs.repository || github.repository }}
 
       - name: Install Node.js
         uses: actions/setup-node@v4
