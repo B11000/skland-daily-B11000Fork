@@ -2,7 +2,7 @@ name: attendance
 
 on:
   schedule:
-    - cron: '5 17 * * *'
+    - cron: '5 4 * * *'
   workflow_dispatch:
   workflow_call:
     secrets:
